@@ -497,6 +497,8 @@ namespace PTABDocumentDownloader
 
                     //    }
                     //}
+                    // created the path for file downloads
+
                     string XPathtoDownload = "D:\\PTAB FILES\\PTABDownloads";
 
                     //var casenumber = _lstDownload.Where(s => s.CaseNumber == "IPR2013-00012");
@@ -545,6 +547,7 @@ namespace PTABDocumentDownloader
 
                     string FileName = string.Empty;
                     string XPathtoDownload = _lstDownload[i].DocXPath.ToString();
+                    // declared the document type
                     string Doctype = string.Empty;
                     string ret = string.Empty;
                     //var casenumber = _lstDownload.Where(s => s.CaseNumber == "IPR2013-00012");
@@ -562,10 +565,12 @@ namespace PTABDocumentDownloader
                     // Enumerate the datarows of the table into a collection of IEnumerable
                     IEnumerable<DataRow> eDR = Dscases.Tables[0].AsEnumerable();
                     // Select the rows you wish to copy to the new table by runing a Linq query.
+
                     IEnumerable<DataRow> query = (from recr in eDR
                                                  where recr.Field<String>("CaseProceeding") == Convert.ToString(_lstDownload[0].DocName)
                                                  select recr).Take(1);
 
+                    //added the conditions for doc type and doc name
                     if (query.Count() == 1)
                     {
                          ret = query.First()["DocName"].ToString();
