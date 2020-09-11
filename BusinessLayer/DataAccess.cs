@@ -201,8 +201,8 @@ namespace BusinessLayer
                     cnnPtabCase.Open();
 
                    
-                       
-                            using (cmdPtabDownloadStatus = new SqlCommand("usp_update_PTAB_Download_Status_test1", cnnPtabCase))
+                       //changed the stored procedure name
+                            using (cmdPtabDownloadStatus = new SqlCommand("usp_update_PTAB_Download_Status_test", cnnPtabCase))
                             {
                                 cmdPtabDownloadStatus.CommandType = CommandType.StoredProcedure;
                                

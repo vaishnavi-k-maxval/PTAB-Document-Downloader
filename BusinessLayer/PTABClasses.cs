@@ -38,7 +38,9 @@ namespace BusinessLayer
         public string PTabCaseProceedings = "usp_PTab_CaseProceedings";
         public string PTABFileNameSave = "usp_PTAB_FileName_Save";
         public string GetCaseNoYearDAILY = "usp_Get_CaseNo_Year_DAILY";
+        //public string GetCaseNoforDownloadDoc = "usp_Get_PTAB_CaseNumbers_for_Download_Test";//usp_Get_PTAB_CaseNumbers_for_DownloadMultMachine;usp_Get_PTAB_CaseNumbers_for_Download_from_bottom
         public string GetCaseNoforDownloadDoc = "usp_Get_PTAB_CaseNumbers_for_Download_Test1";//usp_Get_PTAB_CaseNumbers_for_DownloadMultMachine;usp_Get_PTAB_CaseNumbers_for_Download_from_bottom
+
         public string UpdateDownloadFlag = "usp_Update_PTAB_Is_Download";
     }
 }
